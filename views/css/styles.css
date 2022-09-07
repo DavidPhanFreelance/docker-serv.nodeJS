@@ -3,7 +3,7 @@
 }
 
 body {
-        background: #020A1B;
+        background: #97b0e4;
         color: #ffffff;
         font-family: 'Merriweather', sans-serif;
 }
@@ -39,7 +39,7 @@ img, video, audio {
         max-width: 80%;
 }
 
-div.caption: {
+div.caption {
         float: left;
         clear: both;
 }

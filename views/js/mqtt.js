@@ -6,7 +6,7 @@ const http = require('http');
 var port = process.env.PORT || 3000;
 var serverName = process.env.NAME || 'Unknown'; const mdnsResolver = require('mdns-resolver');
 
-console.log("hello guyss");
+console.log("hello guys");
 
 mdnsResolver.resolve4('192.168.0.100').then(ip => {
   console.log('connecting to '+ip);

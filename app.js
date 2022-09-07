@@ -25,6 +25,8 @@ router.get("/mqtt",function(req,res){
   res.sendFile(path + "mqtt.html");
 });
 
+//console.log(path);
+//path : /Users/frue10931/Projects/docker-serv.node/views/
 app.use(express.static(path));
 app.use("/", router);
 
