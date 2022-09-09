@@ -1,17 +1,21 @@
+console.log('test');
+const createRequire = require('create-require')
+
 var mqtt = require('mqtt');
+
 var express = require('express');
 var app = express();
-var server = require('http').createServer(app); const https = require('https');
+var server = require('http').createServer(app);
+const https = require('https');
 const http = require('http');
 var port = process.env.PORT || 3000;
 var serverName = process.env.NAME || 'Unknown'; const mdnsResolver = require('mdns-resolver');
 
-console.log("hello guys");
-
 mdnsResolver.resolve4('192.168.0.100').then(ip => {
   console.log('connecting to '+ip);
   client = mqtt.connect('mqtt://'+ip+':9001',{clientId: serverName}); client.on('connect',function(){
-    console.log('connected to MQTT Broker'); client.subscribe("edc/update/#"); client.publish("log","connect successful from nodejs server");
+    console.log('connected to MQTT Broker'); client.subscribe("edc/update/#");
+    client.publish("log","connect successful from nodejs server");
   });
   client.on('message', function (topic, message) { try {
     console.log('topic : '+topic); console.log('message : '+message);

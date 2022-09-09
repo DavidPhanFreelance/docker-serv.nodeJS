@@ -1,23 +1,18 @@
 {
-  "name": "nodejs-image-demo",
-  "version": "1.0.0",
-  "description": "nodejs image demo",
-  "author": "Sammy the Shark <sammy@example.com>",
-  "license": "MIT",
+  "name": "socket.io-chat",
+  "version": "0.0.0",
+  "description": "A simple chat client using socket.io",
   "main": "app.js",
-  "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "nodejs",
-    "bootstrap",
-    "express"
-  ],
+  "author": "David",
+  "private": true,
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.18.1",
-    "http": "^0.0.1-security",
-    "mdns-resolver": "^1.1.0",
-    "mqtt": "^4.3.7"
+    "express": "4.13.4",
+    "socket.io": "^1.7.2",
+    "socket.io-redis": "^3.0.0",
+    "mqtt" : "^3. 0.0"
+  },
+  "scripts": {
+    "start": "node app.js"
   }
 }
